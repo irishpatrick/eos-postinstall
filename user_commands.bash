@@ -71,6 +71,8 @@ _PostInstallCommands() {
 	    steam \
 	    discord \
 	    docker \
+	    docker-buildx \
+	    docker-compose \
 	    gvim \
 	    gnome-browser-connector \
 	    clang \
@@ -84,10 +86,23 @@ _PostInstallCommands() {
 	    reaper \
 	    libreoffice-fresh \
 	    vlc \
-	    qbittorrent
+	    vlc-plugin-ffmpeg \
+	    qbittorrent \
+	    gimp \
+	    imagemagick \
+	    go-task \
+	    ninja \
+	    avahi \
+	    bluez \
+	    bluez-utils \
+	    gstreamer-plugins
 
     groupadd docker
     usermod -aG docker $username
+    systemctl enable bluetooth
+
+    echo "alias task=go-task" >> /home/$username/.bashrc
+    chmod $username:$username    /home/$username/.bashrc
 }
 
 ## Execute the commands if the parameter list is valid:

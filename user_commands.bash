@@ -93,9 +93,17 @@ _PostInstallCommands() {
 	    go-task \
 	    ninja \
 	    avahi \
+	    nss-mdns \
 	    bluez \
 	    bluez-utils \
-	    gstreamer-plugins
+	    gstreamer-plugins \
+	    krita \
+	    xf86-input-wacom \
+	    blender \
+	    texlive \
+	    texstudio \
+	    gdb \
+	    zip
 
     groupadd docker
     usermod -aG docker $username

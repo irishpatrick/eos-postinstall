@@ -103,10 +103,16 @@ _PostInstallCommands() {
 	    texlive \
 	    texstudio \
 	    gdb \
-	    zip
+	    zip \
+	    kicad \
+	    kicad-library \
+	    kicad-library-3d \
+	    platformio-core \
+	    platformio-core-udev
 
     groupadd docker
     usermod -aG docker $username
+    usermod -aG uucp $username
     systemctl enable bluetooth
 
     echo "alias task=go-task" >> /home/$username/.bashrc
